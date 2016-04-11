@@ -56,12 +56,14 @@ class Mutt < Formula
   depends_on 'gpgme' => :optional
 
   patch do
-    url "http://ftp.fr.openbsd.org/pub/OpenBSD/distfiles/mutt/trashfolder-1.5.24.diff.gz"
+    # source (copied to the repo) url "http://ftp.fr.openbsd.org/pub/OpenBSD/distfiles/mutt/trashfolder-1.5.24.diff.gz"
+    url "https://raw.githubusercontent.com/emmanuelbernard/homebrew-mutt/master/patchs/trashfolder-1.5.24.diff.gz"
     sha256 "395ffaa6517306e5f5e7327a1aacf3a5cadb34c5b6483170e3f314c95fdb5cb7"
   end if build.with? "trash-patch"
 
   patch do
-    url "http://ftp.fr.openbsd.org/pub/OpenBSD/distfiles/mutt/sidebar-1.5.24.diff.gz"
+    # source (copied to the repo) url "http://ftp.fr.openbsd.org/pub/OpenBSD/distfiles/mutt/sidebar-1.5.24.diff.gz"
+    url "https://raw.githubusercontent.com/emmanuelbernard/homebrew-mutt/master/patchs/sidebar-1.5.24.diff.gz"
     sha256 "75f208279ad2a6fe7066dee97ef6fa56a9f0e663c2d94bcb069cda91bd7a4ccf"
   end if build.with? "sidebar-patch"
 
