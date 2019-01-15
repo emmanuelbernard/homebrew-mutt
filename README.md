@@ -1,15 +1,20 @@
 # homebrew-mutt
 
-This tap contains the mutt 1.5.24 formula with updated versions of patches no longer included in the official homebrew repository:
+This tap contains the mutt 1.11.2 formula with options no longer provided by
+the official homebrew formulae:
 
-- trash_folder patch
-- sidebar patch
-- indexcolor patch
+- `--with-gettext` Build with gettext support
+- `--with-gpgme` Build with gpgme support
+- `--with-libidn` Build with libidn support
+- `--with-s-lang` Build against slang instead of ncurses
+
+I personally need s-lang and (I think) gettext to get some shortcuts working.
+`CTRL+O` does not work otherwise for some reason.
 
 Tested with the following options:
 
 ```
-brew install [.../ see below /...] --with-sidebar-patch --with-trash-patch --with-gpgme --with-s-lang
+brew install [.../ see below /...] --with-gettext --with-gpgme --with-libidn --with-s-lang
 ```
 
 ## How do I install this formula?
